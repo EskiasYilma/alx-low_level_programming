@@ -17,7 +17,7 @@ int main(void)
 		putchar(n % 10 + '0');
 		if (n <= 8)
 			putchar(sep);
-		sletter++;
+		n++;
 	}
 	putchar('\n');
 	return (0);

@@ -8,7 +8,6 @@
 int main(void)
 {
 	int n;
-	char sep = ',';
 
 	n = 0;
 
@@ -16,7 +15,7 @@ int main(void)
 	{
 		putchar(n % 10 + '0');
 		if (n <= 8)
-			putchar(sep);
+			putchar(',');
 		n++;
 	}
 	putchar('\n');

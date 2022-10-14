@@ -13,10 +13,8 @@ int main(void)
 
 	while (sletter <= 'z')
 	{
-		if ((sletter == "e") || (sletter == 'q'))
-		{
-			continue;
-		}
+		if (sletter == "e" || sletter == 'q')
+			sletter++;
 		putchar(sletter);
 		sletter++;
 	}

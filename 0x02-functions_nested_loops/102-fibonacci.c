@@ -12,6 +12,7 @@ int main(void)
 	unsigned long int nth;
 	int counter;
 
+	counter = 1;
 	n = 0;
 	m = 1;
 	while (counter < 50)

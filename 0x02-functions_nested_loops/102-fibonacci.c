@@ -16,7 +16,7 @@ int main(void)
 	m = 1;
 	while (counter < 50)
 	{
-		printf("%lu", n);
+		printf("%lu, ", n);
 		nth = n + m;
 		n = m;
 		m = nth;

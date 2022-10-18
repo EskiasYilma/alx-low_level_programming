@@ -36,10 +36,10 @@ int main(void)
 			printf("%lu%lu", abth, deth);
 		else
 			printf("%lu0%lu", abth, deth);
-		if (counter > 98)
+		if (counter != 98)
 			printf(", ");
 		counter++;
 	}
-	putchar('\n');
+	printf("\n");
 	return (0);
 }

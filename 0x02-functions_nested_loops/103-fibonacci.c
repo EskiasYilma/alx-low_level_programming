@@ -21,7 +21,7 @@ int main(void)
 		nth = n + m;
 		n = m;
 		m = nth;
-		if (nth % 2 == 0 && nth < 4000000)
+		if (nth < 4000000 && nth % 2 == 0)
 			summ += nth;
 		counter++;
 	}

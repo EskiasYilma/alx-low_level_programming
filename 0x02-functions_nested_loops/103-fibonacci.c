@@ -16,7 +16,7 @@ int main(void)
 	counter = 0;
 	n = 0;
 	m = 1;
-	while (counter < 100)
+	while (counter < 50)
 	{
 		nth = n + m;
 		n = m;

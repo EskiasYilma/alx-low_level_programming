@@ -12,11 +12,12 @@ int main(void)
 	unsigned long nth;
 	unsigned long summ;
 	int counter;
-	
+
+	counter = 0;
 	summ = 0;
 	n = 0;
 	m = 1;
-	for (counter = 0; counter < 50; counter++)
+	while (counter < 50)
 	{
 		nth = n + m;
 		n = m;
@@ -25,6 +26,7 @@ int main(void)
 		{
 			summ += nth;
 		}
+		counter++;
 	}
 	printf("%lu\n", summ);
 	return (0);

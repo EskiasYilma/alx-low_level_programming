@@ -40,6 +40,6 @@ int main(void)
 			printf(", ");
 		counter++;
 	}
-	printf("\n");
+	putchar('\n');
 	return (0);
 }

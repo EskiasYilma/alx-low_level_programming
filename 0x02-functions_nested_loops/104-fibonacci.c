@@ -32,6 +32,10 @@ int main(void)
 		next = sumde / 1000;
 		deth = sumde - next * 1000;
 		abth = sumab + next;
+		d = e;
+		e = deth;
+		a = b;
+		b = abth;
 		if (deth > 99)
 			printf("%lu%lu", abth, deth);
 		else

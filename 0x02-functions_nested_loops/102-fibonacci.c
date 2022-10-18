@@ -12,17 +12,20 @@ int main(void)
 	unsigned long int nth;
 	int counter;
 
-	counter = 1;
+	counter = 0;
 	n = 0;
 	m = 1;
 	while (counter < 50)
 	{
-		printf("%lu, ", n);
 		nth = n + m;
 		n = m;
 		m = nth;
+		printf("%lu", nth);
+		if (counter == 49)
+			putchar('\n');
+		else
+			printf(", ");
 		counter++;
 	}
-	putchar('\n');
 	return (0);
 }

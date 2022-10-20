@@ -29,7 +29,9 @@ int main(void)
 			printf("%d", n);
 		}
 		if (n != 100)
-			_putchar(' ');
+		{
+			printf(" ");
+		}
 	}
 	_putchar('\n');
 	return (0);

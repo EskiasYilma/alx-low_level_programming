@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * add - adds two integers and returns the result
- * @n: int to test
- * @m: int to test
- * Return: sum of n and m
+ * mul - function that multiplies two integers.
+ * @a: int to test
+ * @b: int to test
+ * Return: multipliation of a and b
  */
 
-int add(int a, int b)
+int mul(int a, int b)
 {
 	return (a * b);
 }

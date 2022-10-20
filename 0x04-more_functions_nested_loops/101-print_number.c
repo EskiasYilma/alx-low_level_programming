@@ -8,15 +8,31 @@
 
 void print_number(int n)
 {
-	unsigned int m;
-	
-	m = n;
+	unsigned int i, j, current, over;
+
+	i = 1;
+	j = 1;
+	over = 1;
 	if (n < 0)
 	{
 		_putchar('-');
-		m = -m;
+		n = -1 * n;
 	}
-	if ((m / 10) > 0)
-		print_number(m / 10);
-	_putchar(m % 10 + '0');
+	current = n;
+	while (current >= 10)
+	{
+		current = current / 10;
+		j++;
+	}
+	while (i < j)
+	{
+		over = over * 10;
+		i++;
+	}
+	while (over > 1)
+	{
+		_putchar((n / over) % 10 + '0');
+		over = over / 10;
+	}
+	_putchar(n % 10 + '0');
 }

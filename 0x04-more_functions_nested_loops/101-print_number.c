@@ -2,6 +2,7 @@
 
 /**
  * print_number -  a function that prints an integer
+ * @n: Integer to test
  * Return: Nothing
  */
 

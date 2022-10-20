@@ -9,7 +9,6 @@
 void print_line(int n)
 {
 	int i;
-	int j;
 
 	if (n > 0)
 	{

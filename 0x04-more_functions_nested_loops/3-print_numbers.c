@@ -8,12 +8,12 @@
 
 void print_numbers(void)
 {
-	char c = 0;
+	int c = 0;
 
 	while (c <= 9)
 	{
-		_putchar(c);
+		putchar(c % 10 + '0');
 		c++;
 	}
-	_putchar('\n');
+	putchar('\n');
 }

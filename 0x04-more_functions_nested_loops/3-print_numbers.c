@@ -8,11 +8,9 @@
 
 void print_numbers(void)
 {
-	int c = 0;
-
-	while (c <= 9)
+	for (c = 0; c <= 9; c++)
 	{
-		putchar(c % 10 + '0');
+		putchar((c % 10) + '0');
 		c++;
 	}
 	putchar('\n');

@@ -15,7 +15,7 @@ int main(void)
 	n = 2;
 	while (n < target)
 	{
-		if (target % n)
+		if (target % n == 0)
 			target = target / n;
 		n++;
 	}

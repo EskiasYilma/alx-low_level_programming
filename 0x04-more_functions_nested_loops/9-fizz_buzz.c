@@ -31,6 +31,6 @@ int main(void)
 		if (n != 100)
 			_putchar(' ');
 	}
-	printf("%d\n", m);
+	_putchar('\n');
 	return (0);
 }

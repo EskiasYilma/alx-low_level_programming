@@ -13,7 +13,8 @@ void rev_string(char *s)
 	char rev_char;
 	int len, n;
 
-	ptr_start, ptr_end = s;
+	ptr_start = s;
+	ptr_end = s;
 	len = strlen(s);
 
 	for (n = 0; n < len - 1; n++)

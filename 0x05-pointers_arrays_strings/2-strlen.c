@@ -7,7 +7,7 @@
  * Return: length of the character variable
  */
 
-void _strlen(char *s)
+int _strlen(char *s)
 {
 	return(strlen(s));
 }

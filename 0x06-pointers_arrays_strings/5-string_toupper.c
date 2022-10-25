@@ -3,7 +3,7 @@
 
 /**
  * string_toupper - changes all lowercase letters of
- * a string to uppercase
+ * @a: string to uppercase
  * Return: uppercase character
  */
 
@@ -11,7 +11,7 @@ char *string_toupper(char *a)
 {
 	int i = 0;
 	int j = 0;
-	
+
 	while (*(a++))
 		j++;
 

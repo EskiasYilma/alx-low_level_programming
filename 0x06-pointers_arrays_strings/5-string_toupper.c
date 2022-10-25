@@ -15,7 +15,7 @@ char *string_toupper(char *a)
 	while (*(a++))
 		j++;
 
-	while (i < j)
+	while (i <= j)
 	{
 		a[i] = toupper(a[i]);
 		i++;

@@ -9,11 +9,14 @@
 
 int _atoi(char *s)
 {
-	int sign = -1;
-	unsigned int temp;
-	int i, d = 0;
+	int sign;
+	int temp;
+	int i, d;
 
 	temp = 0;
+	sign = -1;
+	i = 0;
+	d = 0;
 
 	while (s[i] != '\0')
 	{
@@ -22,12 +25,13 @@ int _atoi(char *s)
 
 		if (s[i] >= '0' && s[i] <= '9')
 		{
-			temp = (temp * 10) + (s[i] - '0');
+			temp = (temp * 10) - (s[i] - '0');
 			d = 1;
 		}
 		else if (d == 1)
 			break;
 		i++;
 	}
+	temp = temp * sign;
 	return (temp);
 }

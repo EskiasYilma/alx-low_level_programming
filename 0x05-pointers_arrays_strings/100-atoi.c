@@ -20,7 +20,7 @@ int _atoi(char *s)
 	{
 		if (s[i] == '-')
 			neg++;
-		if (n[i] == '\0')
+		if (s[i] == '\0')
 			break;
 		i++;
 	}

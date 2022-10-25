@@ -10,7 +10,6 @@
 int _atoi(char *s)
 {
 	int sign = -1;
-	unsigned int c;
 	unsigned int temp;
 	int i, neg = 0;
 
@@ -19,7 +18,7 @@ int _atoi(char *s)
 
 	while (s[i] != '\0')
 	{
-		if (str[i] == '-')
+		if (s[i] == '-')
 			neg *= -1;
 
 		if (s[i] >= '0' && s[i] <= '9')
@@ -27,7 +26,7 @@ int _atoi(char *s)
 			temp = (temp * 10) + (s[i] - '0');
 			d = 1;
 		}
- 		else if (d == 1)
+		else if (d == 1)
 			break;
 		i++;
 	}

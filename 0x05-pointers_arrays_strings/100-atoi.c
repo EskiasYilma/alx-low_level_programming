@@ -13,7 +13,6 @@ int _atoi(char *s)
 	unsigned int temp;
 	int i, neg = 0;
 
-	c = 0;
 	temp = 0;
 
 	while (s[i] != '\0')

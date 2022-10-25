@@ -10,7 +10,8 @@
 int _atoi(char *s)
 {
 	int sign = 1;
-	unsigned int c, temp = 0;
+	unsigned int c = 0;
+	unsigned int temp;
 	int len, i, neg = 0;
 
 	len = strlen(s);
@@ -19,6 +20,8 @@ int _atoi(char *s)
 	{
 		if (s[i] == '-')
 			neg++;
+		if (n[i] == '\0')
+			break;
 		i++;
 	}
 	if (neg % 2 != 0)

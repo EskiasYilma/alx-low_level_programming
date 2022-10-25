@@ -11,14 +11,14 @@ int _atoi(char *s)
 {
 	int sign = -1;
 	unsigned int temp;
-	int i, neg = 0;
+	int i, d = 0;
 
 	temp = 0;
 
 	while (s[i] != '\0')
 	{
 		if (s[i] == '-')
-			neg *= -1;
+			sign *= -1;
 
 		if (s[i] >= '0' && s[i] <= '9')
 		{

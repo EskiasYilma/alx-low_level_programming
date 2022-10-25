@@ -9,12 +9,10 @@
 
 char *string_toupper(char *a)
 {
-	int i = 0;
-	int j = 0;
+	int i;
+	int j = strlen(a);
 
-	while (*(a++))
-		j++;
-
+	i = 0;
 	while (i <= j)
 	{
 		a[i] = toupper(a[i]);

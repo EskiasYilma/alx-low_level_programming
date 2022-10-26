@@ -23,7 +23,7 @@ char *cap_string(char *a)
 		for (sep_ctr = 0; separator[sep_ctr] != '\0'; sep_ctr++)
 		{
 			if (a[i] == separator[sep_ctr] && (a[i + 1] >= 'a' && a[i + 1] <= 'z'))
-				a[i + 1] = toupper(a[i + 1])
+				a[i + 1] = toupper(a[i + 1]);
 		}
 		i++;
 	}

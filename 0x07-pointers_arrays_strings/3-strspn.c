@@ -10,25 +10,22 @@
 
 unsigned int _strspn(char *s, char *accept);
 {
-	unsigned int count = 0;
-	unsigned int i, j;
-	int bool;
+	unsigned int n;
+	unsigned int m;
 
-	for (i = 0; s[i] != '\0'; i++)
+	while (s[n] != '\0')
 	{
-		bool = 0;
-		for (j = 0; accept[j] != '\0'; j++)
+		m = 0;
+		while (accept[m] != '\0')
 		{
-			if (accept[j] == s[i])
+			while (s[n] != accept[m])
 			{
-				bool = 1;
-				break;
+				if (accept[m] == '\0')
+				{
+					return (n);
+				}
 			}
 		}
-		if (bool == 1)
-			count++;
-		else
-			break;
 	}
-	return (count);
+	return (n);
 }

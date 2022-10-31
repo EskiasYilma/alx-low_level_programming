@@ -11,10 +11,10 @@ void print_chessboard(char (*a)[8])
 	unsigned int n, m;
 
 	n = 0;
-	while (*a[n] != '\0')
+	while (n < 8)
 	{
 		m = 0;
-		while (*a[m] != '\0')
+		while (m < 8)
 		{
 			_putchar(a[n][m]);
 			m++;

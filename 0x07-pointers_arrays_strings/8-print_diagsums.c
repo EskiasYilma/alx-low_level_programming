@@ -16,18 +16,14 @@ void print_diagsums(int *a, int size)
 
 	d_sum1 = d_sum2 = 0;
 
-	i = 0;
-	while (i < array_size)
+	for (i = 0; i < array_size; i += size + 1)
 	{
 		d_sum1 += a[i];
-		i += size + 1;
 	}
 
-	j = size - 1;
-	while (j < array_size - 1)
+	for (j = size - 1; j < array_size; j += size -1)
 	{
 		d_sum2 += a[j];
-		j += size - 1;
 	}
 
 	printf("%d, %d\n", d_sum1, d_sum2);

@@ -10,21 +10,28 @@
 
 void print_diagsums(int *a, int size)
 {
-	unsigned int i, j;
-	unsigned int array_size = size * size;
-	unsigned long d_sum1, d_sum2;
+	int i;
+	int array_size = size * size;
+	int sum;
 
-	d_sum1 = d_sum2 = 0;
-
-	for (i = 0; i < array_size; i += size + 1)
+	sum = 0;
+	i = 0;
+	while (i < array_size)
 	{
-		d_sum1 += a[i];
+		if (i % (size +1) == 0)
+			sum += a[i];
+		i++;
+	}
+	printf("%d, ", sum);
+
+	sum = 0;
+	i = 0;
+	while (i < array_size)
+	{
+		if (i % (size - 1) == 0 && i != (array_size - 1) && i != 0)
+			sum += a[i];
+		i++;
 	}
 
-	for (j = size - 1; j < array_size; j += size -1)
-	{
-		d_sum2 += a[j];
-	}
-
-	printf("%d, %d\n", d_sum1, d_sum2);
+	printf("%d\n", sum);
 }

@@ -8,7 +8,7 @@
 
 void print_chessboard(char (*a)[8])
 {
-	unsigned int n, m;
+	unsigned int n, m = 0;
 
 	n = 0;
 	while (n < 8)
@@ -22,5 +22,4 @@ void print_chessboard(char (*a)[8])
 		_putchar('\n');
 		n++;
 	}
-	_putchar('\0');
 }

@@ -8,7 +8,7 @@
 
 void print_chessboard(char (*a)[8])
 {
-	int n, m;
+	unsigned int n, m;
 
 	n = 0;
 	while (*a[n] != '\0')

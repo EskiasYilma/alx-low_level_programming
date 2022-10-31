@@ -14,8 +14,7 @@ void print_diagsums(int *a, int size)
 	unsigned int array_size = size * size;
 	unsigned long d_sum1, d_sum2;
 
-	d_sum1 = 0;
-	d_sum2 = 0;
+	d_sum1 = d_sum2 = 0;
 
 	i = 0;
 	while (i < array_size)

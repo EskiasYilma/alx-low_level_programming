@@ -17,10 +17,10 @@ unsigned int _strspn(char *s, char *accept);
 		;
 	for (l2 = 0; accept[l2] != '\0'; l2++)
 		;
-	for (i = 0; i <= l1; i++)
+	for (i = 0; i <= l1 && s[i] != '\0'; i++)
 	{
 		bool = 0;
-		for (j = 0; j <= l2; j++)
+		for (j = 0; j <= l2 && accept[j] != '\0'; j++)
 		{
 			if (accept[j] == s[i])
 			{

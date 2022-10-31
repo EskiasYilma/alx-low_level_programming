@@ -11,16 +11,16 @@
 unsigned int _strspn(char *s, char *accept);
 {
 	unsigned int len = 0;
-	int i, j, l1, l2, bool;
+	unsigned int i, j, l1, l2, bool;
 
 	for (l1 = 0; s[l1] != '\0'; l1++)
 		;
 	for (l2 = 0; accept[l2] != '\0'; l2++)
 		;
-	for (i = 0; i < l1; i++)
+	for (i = 0; i <= l1; i++)
 	{
 		bool = 0;
-		for (j = 0; j < l2; j++)
+		for (j = 0; j <= l2; j++)
 		{
 			if (accept[j] == s[i])
 			{

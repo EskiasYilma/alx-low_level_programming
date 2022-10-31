@@ -11,9 +11,10 @@
 void print_diagsums(int *a, int size)
 {
 	int i;
-	int array_size = size * size;
+	int array_size;
 	int sum;
 
+	array_size = size * size;
 	sum = 0;
 	i = 0;
 	while (i < array_size)

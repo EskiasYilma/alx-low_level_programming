@@ -19,7 +19,7 @@ void print_diagsums(int *a, int size)
 	i = 0;
 	while (i < array_size)
 	{
-		if (i % (size +1) == 0)
+		if (i % (size + 1) == 0)
 			sum += a[i];
 		i++;
 	}

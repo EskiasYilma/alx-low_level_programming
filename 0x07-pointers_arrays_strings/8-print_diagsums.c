@@ -12,7 +12,7 @@ void print_diagsums(int *a, int size)
 {
 	unsigned int i, j;
 	unsigned int array_size = size * size;
-	unsigned int d_sum1, d_sum2;
+	unsigned long d_sum1, d_sum2;
 
 	d_sum1 = 0;
 	d_sum2 = 0;

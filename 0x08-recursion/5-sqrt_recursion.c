@@ -25,5 +25,5 @@ int _helper(int n, int i)
 
 int _sqrt_recursion(int n)
 {
-	return (helper(n, 1));
+	return (_helper(n, 1));
 }

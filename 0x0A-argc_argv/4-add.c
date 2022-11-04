@@ -12,19 +12,27 @@ int main(int argc, char *argv[])
 {
 	int i;
 	int res = 0;
-	int count = 0;
+	int char_count = 0;
+	int num_count = 0;
 
 	i = 0;
 	while (argv[i])
 	{
 		if (!atoi(argv[i]))
-			count++;
+			char_count++;
+		if (atoi(argv[i]))
+			num_count++;
 		i++;
 	}
 	if (count == argc - 1)
 	{
 		printf("0\n");
 		return (0);
+	}
+	if (num_count < argc - 1)
+	{
+		printf("Error\n");
+		return(1);
 	}
 
 	if (argc == 1)

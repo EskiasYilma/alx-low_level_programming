@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 	int char_count = 0;
 	int num_count = 0;
 
-	i = 0;
+	i = 1;
 	while (argv[i])
 	{
 		if (!atoi(argv[i]))

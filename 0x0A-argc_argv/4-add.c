@@ -21,15 +21,16 @@ int main(int argc, char *argv[])
 			num_count++;
 		i++;
 	}
-	if (argc == 1 || char_count == argc - 1)
-	{
-		printf("0\n");
-		return (0);
-	}
-	if (num_count < argc - 1)
+
+	if (char_count != 0 && char_count < argc - 1)
 	{
 		printf("Error\n");
 		return (1);
+	}
+	if (argc == 1 || num_count == 0)
+	{
+		printf("0\n");
+		return (0);
 	}
 	i = 1;
 	if (argc > 1)

@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
 	{
 		while (argv[i])
 		{
-			if (atoi(argv[i]) && atoi(argv[i]) >= 0)
+			if (atoi(argv[i]))
 				res += atoi(argv[i]);
 			else
 			{

@@ -10,10 +10,7 @@
 
 int main(int argc, char *argv[])
 {
-	int i;
-	int res = 0;
-	int char_count = 0;
-	int num_count = 0;
+	int i, res = 0, char_count = 0, num_count = 0;
 
 	i = 1;
 	while (argv[i])
@@ -24,7 +21,7 @@ int main(int argc, char *argv[])
 			num_count++;
 		i++;
 	}
-	if (count == argc - 1)
+	if (argc == 1 || char_count == argc - 1)
 	{
 		printf("0\n");
 		return (0);
@@ -32,15 +29,8 @@ int main(int argc, char *argv[])
 	if (num_count < argc - 1)
 	{
 		printf("Error\n");
-		return(1);
+		return (1);
 	}
-
-	if (argc == 1)
-	{
-		printf("0\n");
-		return (0);
-	}
-
 	i = 1;
 	if (argc > 1)
 	{

@@ -10,10 +10,24 @@
 
 int main(int argc, char *argv[])
 {
-	int i = 1;
+	int i;
 	int res = 0;
+	int count = 0;
 
-	if (argc == 1 || (argc <= 2 && atoi(argv[1]) <= 0))
+	i = 0;
+	while (argv[i])
+	{
+		if (!atoi(argv[i]))
+			count++;
+		i++;
+	}
+	if (count == argc - 1)
+	{
+		printf("0\n");
+		return (0);
+	}
+
+	if (argc == 1)
 	{
 		printf("0\n");
 		return (0);

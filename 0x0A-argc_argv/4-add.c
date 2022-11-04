@@ -18,16 +18,19 @@ int main(int argc, char *argv[])
 		printf("0\n");
 		return (0);
 	}
-	while (i < argc)
+	if (argc > 1)
 	{
-		if (atoi(argv[i]) && atoi(argv[i]) > 0)
-			res += atoi(argv[i]);
-		else
+		while (i < argc)
 		{
-			printf("Error\n");
-			return (1);
+			if (atoi(argv[i]) && atoi(argv[i]) > 0)
+				res += atoi(argv[i]);
+			else
+			{
+				printf("Error\n");
+				return (1);
+			}
+			i++;
 		}
-		i++;
 	}
 	printf("%d\n", res);
 	return (0);

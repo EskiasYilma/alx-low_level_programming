@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 	int i = 1;
 	int res = 0;
 
-	if (argc == 1)
+	if (argc == 1 || (argc <= 2 && atoi(argv[1]) <= 0))
 	{
 		printf("0\n");
 		return (0);

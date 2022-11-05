@@ -12,15 +12,25 @@
 int main(int argc, char *argv[])
 {
 	int sum, i, count;
-	int cents[] = {25, 10, 5, 2}
+	int cents[] = {25, 10, 5, 2};
 
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-
-	sum = atoi(argv[1]);
+	if (atoi(argv[1]) == 1)
+	{
+		printf("%d\n", 1);
+		return (0);
+	}
+	if (atoi(argv[1]) > 0)
+		sum = atoi(argv[1]);
+	else
+	{
+		printf("0\n");
+		return (0);
+	}
 	count = 0;
 
 	if (sum > 1)

@@ -2,13 +2,11 @@
 
 /**
  * main - A program that prints its own name
- * @argc: argument count
- * @argv: argument vector
  * Return: 0 (success)
  */
 
-int main(int argc, char *argv[])
+int main()
 {
-	printf("%s\n", argv[0]);
+	printf("%s\n", __FILE__);
 	return (0);
 }

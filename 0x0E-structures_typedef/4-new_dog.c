@@ -25,13 +25,13 @@ dog_t *new_dog(char *name, float age, char *owner)
 	snoop = malloc(sizeof(dog_t));
 	if (snoop == NULL)
 		return (NULL);
-	(*snoop).name = malloc(lname * sizeof((*snoop).name));
+	(*snoop).name = malloc((lname + 1) * sizeof((*snoop).name));
 	if (snoop == NULL)
 		return (NULL);
 	for (i = 0; i < lname; i++)
 		(*snoop).name[i] = name[i];
 	(*snoop).age = age;
-	(*snoop).owner = malloc(lowner * sizeof((*snoop).owner));
+	(*snoop).owner = malloc((lowner + 1) * sizeof((*snoop).owner));
 	if (snoop == NULL)
 		return (NULL);
 	for (i = 0; i < lowner; i++)

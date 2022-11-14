@@ -23,7 +23,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		lname++;
 	while (owner[lowner])
 		lowner++;
-	snoop = malloc(sizeof(dog_t));
+	snoop = malloc(sizeof(struct snoop));
 	if (snoop == NULL)
 		return (NULL);
 	(*nm).name = malloc((lname + 1) * sizeof(char));

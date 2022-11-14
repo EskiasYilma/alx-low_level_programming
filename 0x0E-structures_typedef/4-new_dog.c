@@ -19,9 +19,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 	lname = 0;
 	lowner = 0;
 
-	while (name[lname])
+	while (name[lname] != '\0')
 		lname++;
-	while (owner[lowner])
+	while (owner[lowner] != '\0')
 		lowner++;
 	snoop = malloc(sizeof(struct dog));
 	if (snoop == NULL)

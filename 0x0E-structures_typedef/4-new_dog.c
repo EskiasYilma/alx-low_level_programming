@@ -30,12 +30,12 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	for (i = 0; i < lname; i++)
 		(*snoop).name[i] = name[i];
+	(*snoop).age = age;
 	(*snoop).owner = malloc(lowner * sizeof((*snoop).owner));
 	if (snoop == NULL)
 		return (NULL);
 	for (i = 0; i < lowner; i++)
 		(*snoop).owner[i] = owner[i];
-	(*snoop).age = age;
 	return (snoop);
 
 }

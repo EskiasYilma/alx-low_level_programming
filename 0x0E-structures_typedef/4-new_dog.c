@@ -29,20 +29,19 @@ dog_t *new_dog(char *name, float age, char *owner)
 	nm = malloc((lname + 1) * sizeof(char));
 	if (nm == NULL)
 	{
-		free(nm);
 		free(snoop);
 		return (NULL);
 	}
-	for (i = 0; i < lname; i++)
+	for (i = 0; i <= lname; i++)
 		nm[i] = name[i];
 	ow = malloc((lowner + 1) * sizeof(char));
 	if (ow == NULL)
 	{
-		free(ow);
+		free(nm);
 		free(snoop);
 		return (NULL);
 	}
-	for (i = 0; i < lowner; i++)
+	for (i = 0; i <= lowner; i++)
 		ow[i] = owner[i];
 	(*snoop).name = nm;
 	(*snoop).age = age;

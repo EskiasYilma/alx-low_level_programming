@@ -23,10 +23,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 		lname++;
 	while (owner[lowner])
 		lowner++;
-	snoop = malloc(sizeof(struct snoop));
+	snoop = malloc(sizeof(struct dog));
 	if (snoop == NULL)
 		return (NULL);
-	(*nm).name = malloc((lname + 1) * sizeof(char));
+	nm = malloc((lname + 1) * sizeof(char));
 	if (nm == NULL)
 	{
 		free(nm);
@@ -34,8 +34,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 	for (i = 0; i < lname; i++)
-		(*nm).name[i] = name[i];
-	(*ow).owner = malloc((lowner + 1) * sizeof(char));
+		nm[i] = name[i];
+	ow = malloc((lowner + 1) * sizeof(char));
 	if (ow == NULL)
 	{
 		free(ow);
@@ -43,7 +43,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 	for (i = 0; i < lowner; i++)
-		(*ow).owner[i] = owner[i];
+		ow[i] = owner[i];
 	(*snoop).name = nm;
 	(*snoop).age = age;
 	(*snoop).owner = ow;

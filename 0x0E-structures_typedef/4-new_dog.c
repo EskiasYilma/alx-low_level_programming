@@ -36,8 +36,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 	for (i = 0; i < lowner; i++)
 		(*snoop).owner[i] = owner[i];
 	(*snoop).age = age;
-	if (snoop == NULL)
-		return (NULL);
 	return (snoop);
 
 }

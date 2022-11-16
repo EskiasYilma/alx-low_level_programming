@@ -16,7 +16,7 @@ int main(int argc, char **argv)
 
 	if (get_op_func(argv[2]) == NULL)
 	{
-		printf("Etrror\n");
+		printf("Error\n");
 		exit(99);
 	}
 	printf("%d\n", (get_op_func(argv[1])(n1, n2)));

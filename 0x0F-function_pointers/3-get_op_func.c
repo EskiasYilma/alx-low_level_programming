@@ -1,7 +1,6 @@
 #include "3-calc.h"
 #include <stdlib.h>
 #include <stdio.h>
-#include <string.h>
 
 /**
  * get_op_func - returns a pointer to the function that
@@ -25,17 +24,10 @@ int (*get_op_func(char *s))(int, int)
 
 
 	i = 0;
-	/**
-	 * while (i < 5)
-	 * {
-	 * if (ops[i].op[0] == s[0] && s[1] == '\0')
-	 * return (ops[i].f);
-	 * i++;
-	 * }
-	*/
+
 	while (i < 5)
 	{
-		if (strcmp(ops[i].op, s) == 0)
+		if (ops[i].op[0] == s[0] && s[1] == '\0')
 			return (ops[i].f);
 		i++;
 	}

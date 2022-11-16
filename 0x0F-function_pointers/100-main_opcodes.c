@@ -29,7 +29,7 @@ int main(int argc, char **argv)
 	j = 0;
 	while (j < i)
 	{
-		printf("%02x", c[j] & 0xff);
+		printf("%02x", p[j] & 0xff);
 		j++;
 	}
 	printf("\n");

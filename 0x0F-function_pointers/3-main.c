@@ -1,5 +1,13 @@
 #include "3-calc.h"
 
+/**
+ * main - entry point
+ * @argc: argument count
+ * @argv: argument vector
+ * Return: 0 (Success)
+ */
+
+
 int main(int argc, char **argv)
 {
 	int n1, n2;

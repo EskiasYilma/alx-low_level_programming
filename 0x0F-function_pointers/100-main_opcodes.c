@@ -25,5 +25,13 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		exit(2);
 	}
+	p = (char *)main;
+	j = 0;
+	while (j < i)
+	{
+		printf("%02x", c[j] & 0xff);
+		j++;
+	}
+	printf("\n");
 	return (0);
 }

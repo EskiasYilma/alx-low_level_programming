@@ -30,6 +30,8 @@ int main(int argc, char **argv)
 	while (j < i)
 	{
 		printf("%02x", p[j] & 0xff);
+		if (j != i - 1)
+			printf(" ");
 		j++;
 	}
 	printf("\n");

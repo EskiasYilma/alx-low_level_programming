@@ -75,10 +75,10 @@ void print_all(const char * const format, ...)
 		j = 0;
 		while (j < 4)
 		{
-			if (flags[i].c_flag[0] == format[j])
+			if (*flags[j].c_flag == format[i])
 			{
 				printf("%s", sep);
-				flags[i].f(args);
+				flags[j].f(args);
 				sep = ", ";
 			}
 			j++;

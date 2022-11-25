@@ -1,4 +1,4 @@
-#include "lists.h"
+#include <stdio.h>
 
 void n(void) __attribute__ ((constructor));
 void n(void)

@@ -2,7 +2,7 @@
 
 /**
  * free_listint - frees a listint_t list
- * @head: list head
+ * @head: pointer to the head node of a singly linked list
  */
 
 void free_listint(listint_t *head)
@@ -10,6 +10,6 @@ void free_listint(listint_t *head)
 	if (head == NULL)
 		return;
 	free_list((*head).next);
-	free((*head).str);
+	free((*head).n);
 	free(head);
 }

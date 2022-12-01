@@ -19,7 +19,7 @@ int clear_bit(unsigned long int *n, unsigned int index)
 	j = 1;
 	while (tmp > 0)
 	{
-		j *= 2;		
+		j *= 2;
 		tmp--;
 	}
 

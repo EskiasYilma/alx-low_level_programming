@@ -8,5 +8,6 @@ int _pow_recursion(int x, int y);
 int _strlen(const char *s);
 int char_to_int(char s);
 unsigned int binary_to_uint(const char *b);
+void print_binary(unsigned long int n);
 
 #endif

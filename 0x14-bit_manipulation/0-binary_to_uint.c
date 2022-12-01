@@ -43,7 +43,7 @@ int _strlen(const char *s)
 
 int _ctoi(char s)
 {
-	return (s - '0');
+	return ((unsigned int) s - '0');
 }
 
 /**
@@ -55,6 +55,9 @@ int _ctoi(char s)
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned int i, j, sum = 0;
+
+	if (!b)
+		return (0);
 
 	j = _strlen(b);
 	for (i = 0; b[i] != '\0'; i++, j--)

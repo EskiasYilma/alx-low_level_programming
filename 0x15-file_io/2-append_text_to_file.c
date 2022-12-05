@@ -10,7 +10,7 @@
 int append_text_to_file(const char *filename, char *text_content)
 {
 	int fd, write_stat, text_len;
-	int exists = access(filename, F_OK)
+	int exists = access(filename, F_OK);
 	int read_perm = access(filename, R_OK);
 	int write_perm = access(filename, W_OK);
 

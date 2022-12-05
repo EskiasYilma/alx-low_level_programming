@@ -24,12 +24,19 @@ int main(int argc, char **argv)
 	if (to_file == -1)
 		dprintf(E_O, "Error: Can't write to %s\n", argv[2]), exit(99);
 
-	read_stat = read(from_file, from_text, BUFSIZE);
-	if (read_stat == -1)
-		dprintf(E_O, "Error: Can't read from file %s\n", argv[1]), exit(98);
-	write_stat = write(to_file, from_text, (size_t) read_stat);
-	if (write_stat == -1)
-		dprintf(E_O, "Error: Can't write to %s\n", argv[2]), exit(99);
+	read_stat = 1;
+	while (read_stat)
+	{
+		read_stat = read(from_file, from_text, BUFSIZE);
+		if (read_stat == -1)
+			dprintf(E_O, "Error: Can't read from file %s\n", argv[1]), exit(98);
+		if (read_stat > 0)
+		{
+			write_stat = write(to_file, from_text, (size_t) read_stat);
+			if (write_stat == -1 || write_stat != read_stat)
+				dprintf(E_O, "Error: Can't write to %s\n", argv[2]), exit(99);
+		}
+	}
 	close_from = close(from_file);
 	if (close_from == -1)
 		dprintf(E_O, "Error: Can't close fd %d\n", from_file), exit(100);

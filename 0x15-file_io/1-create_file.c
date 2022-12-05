@@ -1,21 +1,6 @@
 #include "main.h"
 
 /**
- * _strlen - returns the length of a string.
- * @s: pointer to a constant character variable
- * Return: length of the character variable
- */
-
-int _strlen(const char *s)
-{
-	int i;
-
-	for (i = 0; s[i]; i++)
-		;
-	return (i);
-}
-
-/**
  * create_file - creates a file
  * @filename: name of the file to create
  * @text_content: NULL terminated string to write to the file

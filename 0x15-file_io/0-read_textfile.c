@@ -11,7 +11,7 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int txf;
-	size_t read_stat = 0, write_stat = 0;
+	size_t read_stat, write_stat;
 	char *buf;
 
 	if (filename == NULL)
@@ -20,7 +20,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (txf == -1)
 		return (0);
 
-	buf = (char *) malloc(letters + 1);
+	buf = malloc(letters + 1);
 	if (buf == NULL)
 	{
 		free(buf);

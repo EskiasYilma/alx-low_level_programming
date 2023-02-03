@@ -2,7 +2,6 @@
 #define HASH_TABLES_H
 
 #include <stdlib.h>
-#include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
 
@@ -86,6 +85,13 @@ char *shash_table_get(const shash_table_t *ht, const char *key);
 void shash_table_print(const shash_table_t *ht);
 void shash_table_print_rev(const shash_table_t *ht);
 void shash_table_delete(shash_table_t *ht);
+unsigned long my_hash(const char *str, const unsigned int size);
 
+shash_node_t *get_existing_node(shash_table_t *ht, const char *key, unsigned long int *index);
+void update_node_value(shash_node_t *node, const char *value);
+void update_sort_list(shash_table_t *ht, shash_node_t *node);
+shash_node_t *create_new_node(const char *key, const char *value);
+int insert_node_into_sorted_list(shash_node_t *node, shash_table_t *ht);
+void add_to_hash_table(shash_table_t *ht, shash_node_t *node, unsigned long int index);
 
 #endif /* HASH_TABLES_H */
